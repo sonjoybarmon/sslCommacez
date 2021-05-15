@@ -50,10 +50,8 @@ app.use("/ssl-request", async (req, res, next) => {
     value_d: "ref004_D",
   };
   const sslcommer = new SSLCommerzPayment(
-    // process.env.STORE_ID,
-    "sreei609ea197df314",
-    // process.env.SECRET_KEY,
-    "sreei609ea197df314@ssl",
+    process.env.STORE_ID,
+    process.env.SECRET_KEY,
     false
   ); //true for live default false for sandbox
   sslcommer.init(data).then((data) => {
